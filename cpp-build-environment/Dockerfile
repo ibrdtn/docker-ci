@@ -8,7 +8,7 @@ RUN chmod +x /tini
 ENTRYPOINT ["/tini", "--"]
 
 # install common dependencies
-RUN apt-get update && apt-get install -y sudo build-essential devscripts automake autoconf pkg-config libtool debhelper cdbs git subversion
+RUN apt-get update && apt-get install -y sudo build-essential devscripts automake autoconf pkg-config libtool debhelper cdbs git subversion wget curl
 
 # install library packages
 RUN apt-get install -y libssl-dev libz-dev libsqlite3-dev libcurl4-openssl-dev libdaemon-dev libcppunit-dev libnl-3-dev libnl-cli-3-dev libnl-genl-3-dev libnl-nf-3-dev libnl-route-3-dev libarchive-dev bash-completion

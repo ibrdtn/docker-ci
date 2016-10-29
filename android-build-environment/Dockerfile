@@ -8,7 +8,7 @@ RUN chmod +x /tini
 ENTRYPOINT ["/tini", "--"]
 
 # install common dependencies
-RUN apt-get update && apt-get install -y sudo build-essential devscripts automake autoconf pkg-config libtool debhelper cdbs git subversion swig flex bison
+RUN apt-get update && apt-get install -y sudo build-essential devscripts automake autoconf pkg-config libtool debhelper cdbs git subversion swig flex bison wget curl
 RUN echo "jenkins  ALL=NOPASSWD: ALL" >> etc/sudoers
 
 # install more android tools
