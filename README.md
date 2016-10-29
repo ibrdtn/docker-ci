@@ -1,4 +1,8 @@
-# Slave Set-up for ARM binaries #
+# Docker CI #
+
+This repository contains Dockerfiles for building IBR-DTN for Debian and Android.
+
+## Slave Set-up for ARM binaries ##
 
 Each slave must have binfmt support installed.
 
