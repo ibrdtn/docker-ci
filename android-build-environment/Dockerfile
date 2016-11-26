@@ -8,7 +8,7 @@ RUN chmod +x /tini
 ENTRYPOINT ["/tini", "--"]
 
 # install common dependencies
-RUN apt-get update && apt-get install -y sudo build-essential devscripts automake autoconf pkg-config libtool debhelper cdbs git subversion swig flex bison wget curl
+RUN apt-get update && apt-get install -y sudo build-essential devscripts automake autoconf pkg-config libtool debhelper cdbs git subversion swig flex bison wget curl fdroidserver
 RUN echo "jenkins  ALL=NOPASSWD: ALL" >> etc/sudoers
 
 # install more android tools
@@ -21,10 +21,8 @@ RUN apt-get update && \
     apt-get clean -y && \
     apt-get autoclean -y && \
     apt-get autoremove -y && \
-    rm -rf /usr/share/locale/* && \
     rm -rf /var/cache/debconf/*-old && \
-    rm -rf /var/lib/apt/lists/* && \
-    rm -rf /usr/share/doc/*
+    rm -rf /var/lib/apt/lists/*
 
 # install androgenizer
 RUN git clone git://git.collabora.co.uk/git/android/androgenizer.git /opt/androgenizer
