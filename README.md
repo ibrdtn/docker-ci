@@ -4,10 +4,10 @@ This repository contains Dockerfiles for building IBR-DTN for Debian and Android
 
 ## Slave Set-up for ARM binaries ##
 
-Each slave must have binfmt support installed.
+Each slave must have binfmt support and qemu user binaries installed.
 
 ```
-apt-get install binfmt-support
+apt-get install binfmt-support qemu-user-static
 ```
 
 Add this line to '/etc/rc.local'.
